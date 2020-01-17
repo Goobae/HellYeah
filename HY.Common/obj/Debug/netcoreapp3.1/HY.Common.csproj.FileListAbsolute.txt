@@ -1,0 +1,7 @@
+C:\Source\HellYeah\HY.Common\bin\Debug\netcoreapp3.1\HY.Common.deps.json
+C:\Source\HellYeah\HY.Common\bin\Debug\netcoreapp3.1\HY.Common.dll
+C:\Source\HellYeah\HY.Common\bin\Debug\netcoreapp3.1\HY.Common.pdb
+C:\Source\HellYeah\HY.Common\obj\Debug\netcoreapp3.1\HY.Common.AssemblyInfoInputs.cache
+C:\Source\HellYeah\HY.Common\obj\Debug\netcoreapp3.1\HY.Common.AssemblyInfo.cs
+C:\Source\HellYeah\HY.Common\obj\Debug\netcoreapp3.1\HY.Common.dll
+C:\Source\HellYeah\HY.Common\obj\Debug\netcoreapp3.1\HY.Common.pdb

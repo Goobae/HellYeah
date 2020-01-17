@@ -1,0 +1,11 @@
+C:\Source\HellYeah\HY.Data\obj\Debug\netcoreapp3.1\HY.Data.csprojAssemblyReference.cache
+C:\Source\HellYeah\HY.Data\obj\Debug\netcoreapp3.1\HY.Data.AssemblyInfoInputs.cache
+C:\Source\HellYeah\HY.Data\obj\Debug\netcoreapp3.1\HY.Data.AssemblyInfo.cs
+C:\Source\HellYeah\HY.Data\bin\Debug\netcoreapp3.1\HY.Data.deps.json
+C:\Source\HellYeah\HY.Data\bin\Debug\netcoreapp3.1\HY.Data.dll
+C:\Source\HellYeah\HY.Data\bin\Debug\netcoreapp3.1\HY.Data.pdb
+C:\Source\HellYeah\HY.Data\bin\Debug\netcoreapp3.1\HY.Common.dll
+C:\Source\HellYeah\HY.Data\bin\Debug\netcoreapp3.1\HY.Common.pdb
+C:\Source\HellYeah\HY.Data\obj\Debug\netcoreapp3.1\HY.Data.csproj.CopyComplete
+C:\Source\HellYeah\HY.Data\obj\Debug\netcoreapp3.1\HY.Data.dll
+C:\Source\HellYeah\HY.Data\obj\Debug\netcoreapp3.1\HY.Data.pdb

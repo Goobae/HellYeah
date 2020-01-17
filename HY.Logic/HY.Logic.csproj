@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Supervisors\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HY.Common\HY.Common.csproj" />
+    <ProjectReference Include="..\HY.Data\HY.Data.csproj" />
+  </ItemGroup>
+
+</Project>

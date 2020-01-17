@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "HY.Data/1.0.0": {
+        "dependencies": {
+          "HY.Common": "1.0.0"
+        },
+        "runtime": {
+          "HY.Data.dll": {}
+        }
+      },
+      "HY.Common/1.0.0": {
+        "runtime": {
+          "HY.Common.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HY.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HY.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

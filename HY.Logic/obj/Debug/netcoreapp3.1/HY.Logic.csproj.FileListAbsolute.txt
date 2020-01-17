@@ -1,0 +1,13 @@
+C:\Source\HellYeah\HY.Logic\obj\Debug\netcoreapp3.1\HY.Logic.csprojAssemblyReference.cache
+C:\Source\HellYeah\HY.Logic\obj\Debug\netcoreapp3.1\HY.Logic.AssemblyInfoInputs.cache
+C:\Source\HellYeah\HY.Logic\obj\Debug\netcoreapp3.1\HY.Logic.AssemblyInfo.cs
+C:\Source\HellYeah\HY.Logic\bin\Debug\netcoreapp3.1\HY.Logic.deps.json
+C:\Source\HellYeah\HY.Logic\bin\Debug\netcoreapp3.1\HY.Logic.dll
+C:\Source\HellYeah\HY.Logic\bin\Debug\netcoreapp3.1\HY.Logic.pdb
+C:\Source\HellYeah\HY.Logic\bin\Debug\netcoreapp3.1\HY.Common.dll
+C:\Source\HellYeah\HY.Logic\bin\Debug\netcoreapp3.1\HY.Data.dll
+C:\Source\HellYeah\HY.Logic\bin\Debug\netcoreapp3.1\HY.Common.pdb
+C:\Source\HellYeah\HY.Logic\bin\Debug\netcoreapp3.1\HY.Data.pdb
+C:\Source\HellYeah\HY.Logic\obj\Debug\netcoreapp3.1\HY.Logic.csproj.CopyComplete
+C:\Source\HellYeah\HY.Logic\obj\Debug\netcoreapp3.1\HY.Logic.dll
+C:\Source\HellYeah\HY.Logic\obj\Debug\netcoreapp3.1\HY.Logic.pdb
