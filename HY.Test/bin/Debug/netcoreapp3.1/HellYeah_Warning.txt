@@ -1,8 +1,0 @@
-01/17/2020 08:51:58:  TestWarning, Isaac is a warning.
-01/17/2020 08:52:49:  TestError, Marco is an error.
-01/17/2020 08:52:49:  TestInfo, Kaisa is an info.
-01/17/2020 08:52:49:  TestMessage, Mike is a message?
-01/17/2020 08:52:49:  TestWarning, Isaac is a warning.
-01/17/2020 08:57:57:  TestInfo, Kaisa is an info.
-01/17/2020 08:58:40:  TestWarning, Isaac is a warning.
-01/17/2020 08:58:55:  TestWarning, Isaac is a warning.
