@@ -21,6 +21,8 @@ namespace HY.Data.Entities
         public List<HYEntityProperty> Children { get; set; }
         public int EntityId { get; set; }
         public string PropertyName { get; set; }
+        public HYEntityProperty Parent { get; set; }
+        public int ParentId { get; set; }
         public HYEntity Entity { get; set; }
     }
 }

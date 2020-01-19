@@ -7,6 +7,7 @@ namespace HY.Data.Database
     {
         public HYContext() : base()
         {
+            
         }
 
         public DbSet<HYEntity> Entities { get; set; }
@@ -17,6 +18,8 @@ namespace HY.Data.Database
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            optionsBuilder.EnableSensitiveDataLogging();
+            optionsBuilder.EnableDetailedErrors();
             optionsBuilder.UseSqlServer(@"Server=localhost;Database=HellYeah;Trusted_Connection=True;ConnectRetryCount=0");
         }
 
