@@ -6,9 +6,9 @@ namespace HY.Logic.Managers
 {
     public class LoginManager : HYManager
     {
-        private static string loginRequiredEntities = "Account";
+        
 
-        public LoginManager() : base("LoginManager", loginRequiredEntities)
+        public LoginManager() : base()
         {
 
         }

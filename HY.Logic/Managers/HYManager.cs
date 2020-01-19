@@ -12,40 +12,37 @@ namespace HY.Logic.Managers
     {
         private ILogger log = new GenericFileLogger();
         public string Name {get; private set;}
-        public List<string> RequiredEntities { get; protected set; }
         public List<HYEntity> Entities { get; private set; }
 
-        public HYManager(string name, string requiredEntities)
+        public HYManager()
         {
-            Name = name;
-
-            if(!string.IsNullOrEmpty(requiredEntities))
-            {
-                RequiredEntities = requiredEntities.Split(',').ToList();
-            }
-            else
-            {
-                log.LogWarning($"The manager {Name} does not have any Entities Required");
-                RequiredEntities = new List<string>();
-            }
+            //if(!string.IsNullOrEmpty(requiredEntities))
+            //{
+            //    RequiredEntities = requiredEntities.Split(',').ToList();
+            //}
+            //else
+            //{
+            //    log.LogWarning($"The manager {Name} does not have any Entities Required");
+            //    RequiredEntities = new List<string>();
+            //}
         }
 
-        public HYReturn BuildEntities()
+        public HYReturn InitializeManager()
         {
             HYReturn ret = new SuccessReturn();
 
-            foreach(var reqEntity in RequiredEntities)
-            {
-                var tempEntity = new HYEntity(reqEntity);
-                //ret = tempEntity.Build();
+            //foreach(var reqEntity in RequiredEntities)
+            //{
+            //    var tempEntity = new HYEntity(reqEntity);
+            //    //ret = tempEntity.Build();
 
-                if (ret.Failure)
-                {
-                    return ret;
-                }
+            //    if (ret.Failure)
+            //    {
+            //        return ret;
+            //    }
 
-                Entities.Add(tempEntity);
-            }
+            //    Entities.Add(tempEntity);
+            //}
 
             return new SuccessReturn();
         }

@@ -1,14 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace HY.Data.Entities
 {
+    public enum PropertyType
+    { 
+        Bit,
+        Number,
+        Decimal,
+        String,
+        Date,
+        Time,
+        List,
+        ListItem
+    }
+
     public class HYEntityProperty : HYBase
     {
-        public int PropretyTypeId { get; set; }
+        public PropertyType PropretyTypeId { get; set; }
+        public List<HYEntityPropertyValue> Values { get; set; }
+        public List<HYEntityProperty> Children { get; set; }
         public int EntityId { get; set; }
-        public int MyProperty { get; set; }
+        public string PropertyName { get; set; }
         public HYEntity Entity { get; set; }
     }
 }

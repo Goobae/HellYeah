@@ -11,6 +11,7 @@ namespace HY.Data.Database
 
         public DbSet<HYEntity> Entities { get; set; }
         public DbSet<HYEntityProperty> EntityProperties { get; set; }
+        public DbSet<HYEntityPropertyValue> EntityPropertyValues { get; set; }
         public DbSet<HYEntityRelationship> EntityRelationships { get; set; }
         public DbSet<HYEntityCommand> EntityCommands { get; set; }
 
@@ -21,19 +22,7 @@ namespace HY.Data.Database
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<HYEntity>(entity =>
-            {
-                entity.HasIndex(a => a.EntityName).IsUnique();
-            });
-
-            modelBuilder.Entity<HYEntity>().HasData(new HYEntity("TEST") { Id = -1 });
-
-            modelBuilder.Entity<HYEntityProperty>(entity =>
-            {
-                entity.HasOne(d => d.Entity)
-                    .WithMany(p => p.EntityProperties)
-                    .HasForeignKey("EntityId");
-            });
+            HYOnModelCreating.Create(modelBuilder);
         }
     }
 }
