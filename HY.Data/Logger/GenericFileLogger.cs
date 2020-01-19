@@ -32,6 +32,12 @@ namespace HY.Data.Logger
             return Write(Path.Combine(FilePath, fileName), message);
         }
 
+        public HYReturn LogError(Exception message)
+        {
+            var fileName = LogFilePrefix + ErrorSuffix + fileExtension;
+            return Write(Path.Combine(FilePath, fileName), message.ToString());
+        }
+
         public HYReturn LogInformation(string message)
         {
             var fileName = LogFilePrefix + InfoSuffix + fileExtension;

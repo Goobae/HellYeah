@@ -1,4 +1,5 @@
 ﻿using HY.Common.ReturnValues;
+using System;
 
 namespace HY.Data.Logger
 {
@@ -8,5 +9,6 @@ namespace HY.Data.Logger
         HYReturn LogInformation(string message);
         HYReturn LogMessage(string message);
         HYReturn LogError(string message);
+        HYReturn LogError(Exception message);
     }
 }

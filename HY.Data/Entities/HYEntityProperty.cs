@@ -9,5 +9,6 @@ namespace HY.Data.Entities
         public int PropretyTypeId { get; set; }
         public int EntityId { get; set; }
         public int MyProperty { get; set; }
+        public HYEntity Entity { get; set; }
     }
 }
