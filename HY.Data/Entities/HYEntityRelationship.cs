@@ -1,21 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace HY.Data.Entities
+﻿namespace HY.Data.Entities
 {
-    public class HYEntityRelationship
+    public class HYEntityRelationship : HYBase
     {
-        public string RelationshipType { get; private set; }
-        public HYEntity RelationshipEntity { get; private set; }
+        public int RelationshipTypeId { get; private set; }
 
-        public HYEntityRelationship(string relationshipType)
+        public HYEntityRelationship()
         {
-            RelationshipType = relationshipType;
-            //need to init relationship entity 
 
         }
-
-        
     }
 }

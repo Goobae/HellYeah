@@ -9,7 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HY.Data", "HY.Data\HY.Data.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HY.Logic", "HY.Logic\HY.Logic.csproj", "{91B5611F-1C8C-4AB3-84AC-39CA8205F111}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HY.Test", "HY.Test\HY.Test.csproj", "{F69DED27-6221-4003-A8CE-A91369656192}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HY.Test", "HY.Test\HY.Test.csproj", "{F69DED27-6221-4003-A8CE-A91369656192}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DevelopmentInformation", "DevelopmentInformation", "{B6D8B54B-DA2E-465B-B5E0-C32AEF55AF15}"
+	ProjectSection(SolutionItems) = preProject
+		Todo.txt = Todo.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

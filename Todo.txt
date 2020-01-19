@@ -1,0 +1,12 @@
+****************************************************
+					TODO
+****************************************************
+Finish building out data layer
+	= create database
+	= create database connection
+		+ figure out how to communicate with this; entity framework? or something new?
+	= create schema
+	= create tables
+Start creating managers to login and generate objects and properties
+create UI
+Build tests

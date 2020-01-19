@@ -1,6 +1,6 @@
 ﻿namespace HY.Data.Entities
 {
-    public class HYEntityCommand
+    public class HYEntityCommand : HYBase
     {
         
     }
