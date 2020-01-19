@@ -24,12 +24,11 @@ namespace HY.Data.Database
                     .HasForeignKey(a=> a.EntityId);
 
                 entity.HasMany(a => a.Children)
-                    .WithOne(b=> b.Parent)
-                    .HasForeignKey(a=> a.ParentId);
+                    .WithOne(b => b.Parent).OnDelete(DeleteBehavior.NoAction);
 
                 entity.HasMany(a => a.Values)
                     .WithOne(b=> b.EntityProperty)
-                    .HasForeignKey(a => a.EntityPropertyId); ;
+                    .HasForeignKey(a => a.EntityPropertyId);
             });
 
             modelBuilder.Entity<HYEntityPropertyValue>(entity =>

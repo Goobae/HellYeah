@@ -5,6 +5,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20200119182809_addValues.cs" />
+    <Compile Remove="Migrations\20200119182809_addValues.Designer.cs" />
+    <Compile Remove="Migrations\20200119183146_addValues1.cs" />
+    <Compile Remove="Migrations\20200119183146_addValues1.Designer.cs" />
+    <Compile Remove="Migrations\20200119183231_addValues.cs" />
+    <Compile Remove="Migrations\20200119183231_addValues.Designer.cs" />
+    <Compile Remove="Migrations\20200119183339_addValues.cs" />
+    <Compile Remove="Migrations\20200119183339_addValues.Designer.cs" />
+    <Compile Remove="Migrations\20200119183451_addValues.cs" />
+    <Compile Remove="Migrations\20200119183451_addValues.Designer.cs" />
+    <Compile Remove="Migrations\20200119183540_addValues.cs" />
+    <Compile Remove="Migrations\20200119183540_addValues.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.1">
       <PrivateAssets>all</PrivateAssets>

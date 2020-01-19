@@ -40,8 +40,8 @@ namespace HY.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 1,
-                            EntityName = "Task"
+                            Id = -1,
+                            EntityName = "TEST"
                         });
                 });
 
@@ -72,11 +72,8 @@ namespace HY.Data.Migrations
                     b.Property<int>("EntityId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ParentId")
+                    b.Property<int>("MyProperty")
                         .HasColumnType("int");
-
-                    b.Property<string>("PropertyName")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PropretyTypeId")
                         .HasColumnType("int");
@@ -85,158 +82,7 @@ namespace HY.Data.Migrations
 
                     b.HasIndex("EntityId");
 
-                    b.HasIndex("Id")
-                        .IsUnique();
-
-                    b.HasIndex("ParentId");
-
                     b.ToTable("EntityProperties");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            EntityId = 1,
-                            ParentId = 0,
-                            PropertyName = "Description",
-                            PropretyTypeId = 0
-                        },
-                        new
-                        {
-                            Id = 2,
-                            EntityId = 1,
-                            ParentId = 0,
-                            PropertyName = "DateCreated",
-                            PropretyTypeId = 4
-                        },
-                        new
-                        {
-                            Id = 3,
-                            EntityId = 1,
-                            ParentId = 0,
-                            PropertyName = "DateCreated",
-                            PropretyTypeId = 4
-                        },
-                        new
-                        {
-                            Id = 4,
-                            EntityId = 1,
-                            ParentId = 0,
-                            PropertyName = "TaskList",
-                            PropretyTypeId = 6
-                        },
-                        new
-                        {
-                            Id = 5,
-                            EntityId = 1,
-                            ParentId = 4,
-                            PropertyName = "TaskListItem",
-                            PropretyTypeId = 7
-                        },
-                        new
-                        {
-                            Id = 6,
-                            EntityId = 1,
-                            ParentId = 5,
-                            PropertyName = "Description",
-                            PropretyTypeId = 3
-                        },
-                        new
-                        {
-                            Id = 7,
-                            EntityId = 1,
-                            ParentId = 5,
-                            PropertyName = "Completed",
-                            PropretyTypeId = 0
-                        },
-                        new
-                        {
-                            Id = 8,
-                            EntityId = 1,
-                            ParentId = 4,
-                            PropertyName = "TaskListItem",
-                            PropretyTypeId = 7
-                        },
-                        new
-                        {
-                            Id = 9,
-                            EntityId = 1,
-                            ParentId = 8,
-                            PropertyName = "Description",
-                            PropretyTypeId = 3
-                        },
-                        new
-                        {
-                            Id = 10,
-                            EntityId = 1,
-                            ParentId = 8,
-                            PropertyName = "Completed",
-                            PropretyTypeId = 0
-                        });
-                });
-
-            modelBuilder.Entity("HY.Data.Entities.HYEntityPropertyValue", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("EntityPropertyId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Value")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("EntityPropertyId");
-
-                    b.ToTable("EntityPropertyValues");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            EntityPropertyId = 1,
-                            Value = "Test"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            EntityPropertyId = 2,
-                            Value = "1/19/2020 10:28:08 AM"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            EntityPropertyId = 3,
-                            Value = "1/19/2020 10:28:08 AM"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            EntityPropertyId = 6,
-                            Value = "Read Book"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            EntityPropertyId = 7,
-                            Value = "False"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            EntityPropertyId = 9,
-                            Value = "Run 5 miles"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            EntityPropertyId = 10,
-                            Value = "False"
-                        });
                 });
 
             modelBuilder.Entity("HY.Data.Entities.HYEntityRelationship", b =>
@@ -271,21 +117,6 @@ namespace HY.Data.Migrations
                     b.HasOne("HY.Data.Entities.HYEntity", "Entity")
                         .WithMany("EntityProperties")
                         .HasForeignKey("EntityId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("HY.Data.Entities.HYEntityProperty", "Parent")
-                        .WithMany("Children")
-                        .HasForeignKey("ParentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("HY.Data.Entities.HYEntityPropertyValue", b =>
-                {
-                    b.HasOne("HY.Data.Entities.HYEntityProperty", "EntityProperty")
-                        .WithMany("Values")
-                        .HasForeignKey("EntityPropertyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
