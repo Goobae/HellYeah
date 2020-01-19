@@ -4,14 +4,16 @@ using HY.Data.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace HY.Data.Migrations
 {
     [DbContext(typeof(HYContext))]
-    partial class HYContextModelSnapshot : ModelSnapshot
+    [Migration("20200119052210_isuniqueEntityName")]
+    partial class isuniqueEntityName
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

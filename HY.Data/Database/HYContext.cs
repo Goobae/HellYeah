@@ -23,7 +23,7 @@ namespace HY.Data.Database
         {
             modelBuilder.Entity<HYEntity>(entity =>
             {
-                entity.Property(e => e.EntityName);
+                entity.HasIndex(a => a.EntityName).IsUnique();
             });
 
             modelBuilder.Entity<HYEntity>().HasData(new HYEntity("TEST") { Id = -1 });

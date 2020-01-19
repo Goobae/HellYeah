@@ -4,14 +4,16 @@ using HY.Data.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace HY.Data.Migrations
 {
     [DbContext(typeof(HYContext))]
-    partial class HYContextModelSnapshot : ModelSnapshot
+    [Migration("20200119051441_uniqueConstraintHopefully")]
+    partial class uniqueConstraintHopefully
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -31,9 +33,7 @@ namespace HY.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("EntityName")
-                        .IsUnique()
-                        .HasFilter("[EntityName] IS NOT NULL");
+                    b.HasIndex("EntityName");
 
                     b.ToTable("Entities");
 
