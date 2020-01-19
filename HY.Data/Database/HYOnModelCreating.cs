@@ -1,4 +1,5 @@
 ﻿using HY.Data.Entities;
+using HY.Data.Entities.EFHelpers;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -21,13 +22,16 @@ namespace HY.Data.Database
 
                 entity.HasOne(d => d.Entity)
                     .WithMany(p => p.EntityProperties)
-                    .HasForeignKey(a=> a.EntityId);
+                    .HasForeignKey(a => a.EntityId);
 
                 entity.HasMany(a => a.Children)
-                    .WithOne(b => b.Parent).OnDelete(DeleteBehavior.NoAction);
+                     .WithOne(b => b.Child).HasForeignKey(b => b.ChildId);
+
+                entity.HasOne(a => a.Parent)
+                    .WithOne(a => a.Parent);
 
                 entity.HasMany(a => a.Values)
-                    .WithOne(b=> b.EntityProperty)
+                    .WithOne(b => b.EntityProperty)
                     .HasForeignKey(a => a.EntityPropertyId);
             });
 
@@ -39,6 +43,16 @@ namespace HY.Data.Database
                     .WithMany(b => b.Values)
                     .HasForeignKey(a => a.EntityPropertyId);
             });
+
+            modelBuilder.Entity<HYManyToMany<HYEntityProperty, HYEntityProperty>>(entitiy =>
+            {
+                entitiy.HasKey(a => new { a.ParentId, a.ChildId});
+                entitiy.HasOne(a => a.Parent)
+                    .WithOne(a => a.Parent);
+            });
+
+
+            #region Seed
 
             modelBuilder.Entity<HYEntity>().HasData(new HYEntity("Task") { Id = 1 });
 
@@ -164,5 +178,7 @@ namespace HY.Data.Database
                }
            );
         }
+
+        #endregion    }
     }
 }

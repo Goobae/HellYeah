@@ -1,11 +1,12 @@
 ﻿using HY.Data.Entities;
+using HY.Data.Entities.EFHelpers;
 using Microsoft.EntityFrameworkCore;
 
 namespace HY.Data.Database
 {
     public class HYContext : DbContext
     {
-        public HYContext() : base()
+        public HYContext()
         {
             
         }
@@ -13,14 +14,13 @@ namespace HY.Data.Database
         public DbSet<HYEntity> Entities { get; set; }
         public DbSet<HYEntityProperty> EntityProperties { get; set; }
         public DbSet<HYEntityPropertyValue> EntityPropertyValues { get; set; }
+        public DbSet<HYManyToMany<HYEntityProperty, HYEntityProperty>> EntityPropertiesToEntityProperties { get; set; }
         public DbSet<HYEntityRelationship> EntityRelationships { get; set; }
         public DbSet<HYEntityCommand> EntityCommands { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.EnableSensitiveDataLogging();
-            optionsBuilder.EnableDetailedErrors();
-            optionsBuilder.UseSqlServer(@"Server=localhost;Database=HellYeah;Trusted_Connection=True;ConnectRetryCount=0");
+            HYOnConfiguring.Configure(optionsBuilder);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

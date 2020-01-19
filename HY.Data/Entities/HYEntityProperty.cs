@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using HY.Data.Entities.EFHelpers;
+using System.Collections.Generic;
 
 namespace HY.Data.Entities
 {
@@ -17,12 +18,16 @@ namespace HY.Data.Entities
     public class HYEntityProperty : HYBase
     {
         public PropertyType PropretyTypeId { get; set; }
-        public List<HYEntityPropertyValue> Values { get; set; }
-        public List<HYEntityProperty> Children { get; set; }
-        public int EntityId { get; set; }
         public string PropertyName { get; set; }
-        public HYEntityProperty Parent { get; set; }
+
+        public int EntityId { get; set; }
+        public virtual HYEntity Entity { get; set; }
+
         public int ParentId { get; set; }
-        public HYEntity Entity { get; set; }
+        public HYManyToMany<HYEntityProperty, HYEntityProperty> Parent { get; set; }
+
+        public List<HYManyToMany<HYEntityProperty, HYEntityProperty>> Children { get; set; }
+
+        public List<HYEntityPropertyValue> Values { get; set; }        
     }
 }
