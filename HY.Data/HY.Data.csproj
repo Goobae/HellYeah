@@ -17,6 +17,8 @@
     <Compile Remove="Migrations\20200119183451_addValues.Designer.cs" />
     <Compile Remove="Migrations\20200119183540_addValues.cs" />
     <Compile Remove="Migrations\20200119183540_addValues.Designer.cs" />
+    <Compile Remove="Migrations\20200119195417_manytomany.cs" />
+    <Compile Remove="Migrations\20200119195417_manytomany.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
